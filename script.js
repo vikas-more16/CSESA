@@ -56,7 +56,10 @@ function activateNavLink() {
     // Calculate intersection with viewport (more accurate method)
     const viewportTop = scrollY;
     const intersectionTop = Math.max(sectionTop, viewportTop);
-    const intersectionBottom = Math.min(sectionBottom, viewportTop + window.innerHeight);
+    const intersectionBottom = Math.min(
+      sectionBottom,
+      viewportTop + window.innerHeight
+    );
     const intersection = Math.max(0, intersectionBottom - intersectionTop);
 
     // Select the section with the maximum intersection
@@ -88,12 +91,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       navLinks.forEach((link) => link.classList.remove("active"));
       // Add active class to clicked link
       this.classList.add("active");
-      
+
       target.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-      
+
       // Update active state after scroll completes
       setTimeout(() => {
         activateNavLink();
@@ -168,13 +171,6 @@ const teamData = {
       github: "https://github.com/raningashrushti",
     },
     {
-      name: "Prasad Shinde",
-      role: "Treasurer",
-      image: "Assets/Images/Prasad Shinde.jpg",
-      linkedin: "https://www.linkedin.com/in/prasad-shinde-966847297",
-      github: "https://github.com/meprasadshinde",
-    },
-    {
       name: "Vikas More",
       role: "Technical Advisor (Head)",
       image: "Assets/Images/VikasMore.jpeg",
@@ -225,12 +221,20 @@ const teamData = {
       linkedin: "https://www.linkedin.com/in/vaishnavi-mankhair-860649299",
       github: "#https://github.com/Vaishnavim-04",
     },
+
     {
       name: "Shubham Dhakre",
       role: "Team Member (Head)",
       image: "Assets/Images/ShubhamDhakre.png",
       linkedin: "https://www.linkedin.com/in/shubham-dhakre-553006329/",
       github: "#https://github.com/ShubhamDhakre",
+    },
+    {
+      name: "Prasad Shinde",
+      role: "Treasurer",
+      image: "Assets/Images/Prasad Shinde.jpg",
+      linkedin: "https://www.linkedin.com/in/prasad-shinde-966847297",
+      github: "https://github.com/meprasadshinde",
     },
   ],
   technical: [
@@ -764,7 +768,6 @@ document.addEventListener("DOMContentLoaded", () => {
       closePhotoModal();
     }
   });
-
 });
 
 // Add parallax effect to hero section
