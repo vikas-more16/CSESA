@@ -366,7 +366,7 @@ body {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: var(--text-light);
+  background: var(--text-primary);
   transition: all 0.3s ease;
 }
 
@@ -718,7 +718,6 @@ section {
     var(--bg-secondary) 0%,
     var(--bg-tertiary) 100%
   );
-  padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
@@ -2584,7 +2583,6 @@ section {
   transform: translateY(-15px) scale(1.03);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
 }
-
 
 /* Enhanced Buttons */
 

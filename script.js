@@ -31,20 +31,46 @@ navLinks.forEach((link) => {
 const sections = document.querySelectorAll("section[id]");
 
 function activateNavLink() {
-  const scrollY = window.pageYOffset;
+  const scrollY = window.pageYOffset + 150; // Offset for navbar height
+  let currentSection = "";
+  let maxIntersection = 0;
+
+  // Create a map of nav link hrefs to ensure we only check sections with nav links
+  const navSectionIds = new Set();
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      navSectionIds.add(href.substring(1));
+    }
+  });
 
   sections.forEach((section) => {
-    const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
     const sectionId = section.getAttribute("id");
+    // Only process sections that have corresponding nav links
+    if (!navSectionIds.has(sectionId)) return;
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${sectionId}`) {
-          link.classList.add("active");
-        }
-      });
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + sectionHeight;
+
+    // Calculate intersection with viewport (more accurate method)
+    const viewportTop = scrollY;
+    const intersectionTop = Math.max(sectionTop, viewportTop);
+    const intersectionBottom = Math.min(sectionBottom, viewportTop + window.innerHeight);
+    const intersection = Math.max(0, intersectionBottom - intersectionTop);
+
+    // Select the section with the maximum intersection
+    if (intersection > maxIntersection) {
+      maxIntersection = intersection;
+      currentSection = sectionId;
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    const linkHref = link.getAttribute("href");
+    if (linkHref && linkHref.substring(1) === currentSection) {
+      link.classList.add("active");
     }
   });
 }
@@ -55,12 +81,23 @@ window.addEventListener("scroll", activateNavLink);
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
+    const targetId = this.getAttribute("href");
+    const target = document.querySelector(targetId);
     if (target) {
+      // Remove active class from all links
+      navLinks.forEach((link) => link.classList.remove("active"));
+      // Add active class to clicked link
+      this.classList.add("active");
+      
       target.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
+      
+      // Update active state after scroll completes
+      setTimeout(() => {
+        activateNavLink();
+      }, 1000);
     }
   });
 });
