@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSESA - Computer Science and Engineering Students Association</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <img src="Assets/csesalogocroped.png" alt="CSESA Logo" class="logo-icon">
+            <span>CSESA</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#events" class="nav-link">Our Events</a></li>
+            <li><a href="#heads" class="nav-link">Leadership</a></li>
+            <li><a href="#team" class="nav-link">Team</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <img src="Assets/CSESA_Logo.png" alt="CSESA Logo" class="hero-logo">
+          <h1 class="hero-title">
+            Computer Science and Engineering Students Association
+          </h1>
+          <p class="hero-subtitle">Learn Beyond Academics</p>
+          <div class="hero-buttons">
+            <a href="#about" class="btn btn-primary">Know More</a>
+            <a href="#events" class="btn btn-secondary">Our Events</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Us</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="about-content">
+          <p class="about-intro">
+            We <strong>CSESA</strong> value excellence, innovation, integrity,
+            and being trustworthy these qualities defines us.
+          </p>
+          <p class="about-description">
+            We Computer Science and Engineering Student Association, SSGMCE are
+            initiating with a vision to excel in communication skill, teamwork,
+            multidisciplinary approach and an ability to relate engineering
+            issues to broader social context. We CSESA a group of enthusiasts to
+            demonstrate knowledge of advanced programming technique to solve
+            contemporary issues.
+          </p>
+        </div>
+
+        <div class="vision-mission">
+          <div class="vm-card">
+            <div class="vm-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>VISION</h3>
+            <p>
+              To achieve global recognition in Computer Science and Engineering
+              education to serve the growing needs of industry and society.
+            </p>
+          </div>
+          <div class="vm-card">
+            <div class="vm-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>MISSION</h3>
+            <ul>
+              <li>
+                To imbibe programming skills in latest areas of computer science
+                through project work.
+              </li>
+              <li>
+                To prepare the Innovators, Entrepreneur, Researchers and
+                Educationalist through quality education and Industry Institute
+                Interaction.
+              </li>
+              <li>
+                To prepare good human beings who work with missionary zeal for
+                upliftment of society.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="quote-section">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="quote-text">
+            "Knowledge is power, Information is liberating, Education is the
+            premise of progress, in every society."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Events</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">Check out our latest events</p>
+        </div>
+
+        <div class="event-filters">
+          <button class="filter-btn active" data-filter="last-year">
+            Last Year Activities
+          </button>
+          <button class="filter-btn" data-filter="current-year">
+            Current Year Activities
+          </button>
+        </div>
+
+        <div class="events-grid" id="eventsGrid">
+          <!-- Events will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty Advisors Section -->
+    <section id="faculty" class="faculty">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Faculty Advisors</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Mentors are there to guide us to the best of the Knowledge.
+          </p>
+        </div>
+        <div class="faculty-grid">
+          <div class="faculty-card">
+            <div class="faculty-image">
+              <img
+                src="Assets/Faculty/Somani sir.png"
+                alt="Dr. S. B. Somani"
+                onerror="this.src='https://via.placeholder.com/300x300?text=Dr.+S.+B.+Somani'"
+              />
+            </div>
+            <div class="faculty-info">
+              <h3>Dr. S. B. Somani</h3>
+              <p class="faculty-role">Principal, SSGMCE</p>
+              <p class="faculty-message">
+                It gives me an immense pleasure in welcoming newly constituted
+                dynamic CSESA team for the session 2021-22. We congratulate to
+                last session team, who added new dimension to this student
+                chapter.
+              </p>
+            </div>
+          </div>
+          <div class="faculty-card">
+            <div class="faculty-image">
+              <img
+                src="Assets/Faculty/HODSIR.jpg"
+                alt="Dr. J. M. Patil"
+                onerror="this.src='https://via.placeholder.com/300x300?text=Dr.+J.+M.+Patil'"
+              />
+            </div>
+            <div class="faculty-info">
+              <h3>Dr. J. M. Patil</h3>
+              <p class="faculty-role">
+                Head of Dept. Computer Science & Engineering
+              </p>
+              <p class="faculty-message">
+                It is my pleasure to congratulate the team that has taken the
+                initiative for developing such a dynamic and informative
+                website. The Computer Science Engineering Association (CSESA) is
+                a technical association which provides just the right platform
+                for the interaction and exchange of information, knowledge and
+                ideas among students of Computer Science and other streams.
+              </p>
+            </div>
+          </div>
+          <div class="faculty-card">
+            <div class="faculty-image">
+              <img
+                src="Assets\Faculty\smjawke.jpeg"
+                alt="Prof. S. M. Jawake"
+                onerror="this.src='https://via.placeholder.com/300x300?text=Prof.+S.+M.+Jawake'"
+              />
+            </div>
+            <div class="faculty-info">
+              <h3>Prof. S. M. Jawake</h3>
+              <p class="faculty-role">Faculty Advisor, CSESA</p>
+              <p class="faculty-message">
+                "EDUCATION IS THE BASIS OF THE GROWTH AND DEVELOPMENT OF THE
+                SOCIETY". I would like to take this opportunity to welcome you
+                to explore the lifetime learning opportunity with CSESA, as we
+                firmly believe in making learning simply simple with a result
+                and target oriented approach for the better future of other
+                students and society.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Team CSESA</h2>
+          <div class="title-underline"></div>
+        </div>
+
+          <!-- Leadership Heads Section -->
+          <section id="heads" class="heads-section">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title">Our Leadership</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">
+                  Meet the driving force behind CSESA
+                </p>
+              </div>
+              <div class="heads-grid" id="headsGrid">
+                <!-- Leadership heads will be dynamically loaded here -->
+              </div>
+            </div>
+          </section>
+
+          <div class="team-category" id="technical">
+            <h3 class="category-title">Technical Team</h3>
+            <div class="team-grid">
+              <!-- Technical members -->
+            </div>
+          </div>
+
+          <div class="team-category" id="eventManagement">
+            <h3 class="category-title">Event Management</h3>
+            <div class="team-grid">
+              <!-- Event management members -->
+            </div>
+          </div>
+
+          <div class="team-category" id="advertising">
+            <h3 class="category-title">Advertising Committee</h3>
+            <div class="team-grid">
+              <!-- Advertising members -->
+            </div>
+          </div>
+
+          <div class="team-category" id="graphics">
+            <h3 class="category-title">Graphics Team</h3>
+            <div class="team-grid">
+              <!-- Graphics members -->
+            </div>
+          </div>
+
+          <div class="team-category" id="registration">
+            <h3 class="category-title">Registration Committee</h3>
+            <div class="team-grid">
+              <!-- Registration members -->
+            </div>
+          </div>
+
+          <div class="team-category" id="members">
+            <h3 class="category-title">Members</h3>
+            <div class="team-grid">
+              <!-- General members -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Feel free to contact us in case of any queries.
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Address</h4>
+                <p>SSGMCE, SBI Colony,<br />Shegaon, Maharashtra<br />444203</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>
+                  <a href="mailto:csesassgmce2021@gmail.com"
+                    >csesassgmce2021@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>
+                  <a href="tel:8830651820">8830651820</a><br /><a
+                    href="tel:9067718922"
+                    >9067718922</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Instagram</h4>
+                <p>
+                  <a
+                    href="https://instagram.com/csesa_ssgmce"
+                    target="_blank"
+                    >@csesa_ssgmce</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="Assets/csesalogocroped.png" alt="CSESA Logo" class="logo-icon">
+            <span>CSESA</span>
+          </div>
+          <div class="footer-cont">
+          <p class="footer-text">© Copyright CSESA. All Rights Reserved</p>
+          <p class="footer-credit">Developed by Web Development Team, CSESA</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Photo Modal -->
+    <div class="photo-modal" id="photoModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-image-container">
+          <img id="modalImage" src="" alt="Team Member" />
+        </div>
+        <div class="modal-info">
+          <h3 id="modalName"></h3>
+          <p id="modalRole"></p>
+          <div class="modal-social" id="modalSocial"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated CSESA Logo Background -->
+    <div class="animated-logo-background">
+      <svg
+        class="csesa-logo"
+        viewBox="0 0 400 400"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Horizontal dashes (left side - curved/fanning pattern) -->
+        <g class="dashes">
+          <path
+            d="M 50 140 Q 60 150 70 150"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 50 165 Q 62 170 75 170"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 50 185 Q 65 190 80 190"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 50 205 Q 62 210 75 210"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 50 225 Q 60 230 70 230"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+        </g>
+        <!-- C-shaped structure with nodes -->
+        <g class="c-shape">
+          <!-- Main C shape (hexagonal outline) -->
+          <path
+            d="M 150 100 L 250 100 L 280 150 L 280 200 L 250 250 L 150 250 L 120 200 Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <!-- Three circular nodes -->
+          <circle cx="180" cy="150" r="12" fill="currentColor" class="node" />
+          <circle cx="200" cy="200" r="12" fill="currentColor" class="node" />
+          <circle cx="180" cy="250" r="12" fill="currentColor" class="node" />
+          <!-- Connecting lines -->
+          <line
+            x1="180"
+            y1="150"
+            x2="200"
+            y2="200"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+          <line
+            x1="200"
+            y1="200"
+            x2="180"
+            y2="250"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+          />
+        </g>
+        <!-- CSESA Text -->
+        <text
+          x="200"
+          y="320"
+          font-family="Arial, sans-serif"
+          font-size="48"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="currentColor"
+          class="logo-text"
+        >
+          CSESA
+        </text>
+        <!-- Learn Beyond Academics Text -->
+        <text
+          x="200"
+          y="360"
+          font-family="Arial, sans-serif"
+          font-size="20"
+          font-weight="bold"
+          text-anchor="middle"
+          fill="currentColor"
+          class="logo-subtext"
+        >
+          Learn Beyond Academics
+        </text>
+      </svg>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
