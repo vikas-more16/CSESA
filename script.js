@@ -195,7 +195,7 @@ const teamData = {
     {
       name: "Vasundhara Thakare",
       role: "Advertising Committee (Head)",
-      image: "/Assets/Images/Vasundhara Thakare.jpg",
+      image: "Assets/Images/Vasundhara Thakare.jpg",
       linkedin:
         "https://www.linkedin.com/in/vasundhara-thakare-019551294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       github: "https://github.com/@vasu08thakare/",
@@ -311,7 +311,7 @@ const teamData = {
     {
       name: "Nandan Kulat",
       role: "Advertising Committee Member",
-      image: "/Assets/Images/nandan kulat.jpg",
+      image: "Assets/Images/nandan kulat.jpg",
       linkedin:
         "https://www.linkedin.com/in/nandan-kulat-629a27344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       github: "https://github.com/NANDANKULAT129",
