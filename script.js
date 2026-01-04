@@ -239,7 +239,7 @@ const teamData = {
   ],
   technical: [
     {
-      name: "Ayush Agrawal",
+      name: "Aayush Agrawal",
       role: "Technical Advisor",
       image: "Assets/Images/AyushAgrawal.JPG",
       linkedin: "https://www.linkedin.com/in/aayush-agrawal-4534762b3/",
@@ -292,7 +292,7 @@ const teamData = {
       github: "https://github.com/pallavi200623-sourse",
     },
     {
-      name: "Shruti Bute",
+      name: "Shruti Bhute",
       role: "Event Manager",
       image: "Assets/Images/ShrutiBute.jpg",
       linkedin: "https://www.linkedin.com/in/shruti-bhute-7b4678353",
@@ -352,7 +352,7 @@ const teamData = {
       github: "https://github.com/tusharr2709",
     },
     {
-      name: "Shehal",
+      name: "Shehal Rangankar",
       role: "Registration Committee Member",
       image: "Assets/Images/Shehal.jpg",
       linkedin: "https://www.linkedin.com/in/snehalrangankar",
